@@ -1,0 +1,48 @@
+.second-section {
+	background-color: #fff;
+	padding-bottom: 180px;
+	.ba-container {
+		.headliner {
+			@include headliner;
+		}
+		.second-section-wrapper {
+			@include flex-row;
+			.second-section__colums {
+				@include flex-colums;
+				padding: 55px 30px 60px 30px;
+				margin-left: 30px;
+				text-align: center;
+				position: relative;
+				&:first-child {
+					margin-left: 0;
+				}
+				&:hover {
+					box-shadow: 0 0 35px 0 rgba(20, 20, 21, 0.21);
+					cursor: pointer;
+					transition: box-shadow .5s;
+				}
+				i {
+					font-size: 45px;
+					color: rgba(255, 255, 255, 0.8);
+					margin-bottom: 15px;
+				}
+				h4 {
+					font-size: 20px;
+					font-weight: 600;
+					letter-spacing: 0.2px;
+					color: rgba(255, 255, 255, 0.9);
+					padding-bottom: 15px;
+				}
+				p {
+					font-size: 15px;
+					line-height: 1.47;
+					letter-spacing: 0.2px;
+					color: rgba(255, 255, 255, 0.75);
+				}
+				button {
+					@include button;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+.third-section {
+	padding-bottom: 140px;
+	.ba-container {
+		.headliner {
+			@include headliner;
+		}
+		.third-section-flex-row {
+			@include flex-row;
+			padding-bottom: 28px;
+			.third-section__fhoto-container {
+				margin-left: 28px;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
