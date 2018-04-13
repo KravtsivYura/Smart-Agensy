@@ -79,6 +79,8 @@
 @import './componants/_second-section.scss';
 @import './componants/_third-section.scss';
 @import './componants/_forth-section.scss';
+@import './componants/_fifth-section.scss';
+@import './componants/_sixth-section.scss';
 
 
 *, h1, h2, h3, h4, h5, h6, p {
@@ -86,6 +88,7 @@
 }
 a {
 	text-decoration: none;
+	color: inherit;
 }
 input {
 	border: none;
@@ -99,6 +102,10 @@ textarea {
 button {
 	border: none;
 	outline: none;
+}
+img {
+	display: block;
+	border-radius: inherit;
 }
 body {
 	font-family: 'Open Sans', sans-serif;

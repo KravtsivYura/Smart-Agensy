@@ -1,0 +1,118 @@
+@mixin sixth-section-info {
+	@include flex-colums;
+	text-align: center;
+	padding: 85px 48px 38px 48px;
+	margin-left: 36px;
+	position: relative;
+	box-shadow: 0.5px 3px 14px 0 rgba(20, 20, 21, 0.08);
+	&:first-child {
+		margin-left: 0;
+	}
+	&:hover {
+		box-shadow: 0 0 27px 0 rgba(20, 20, 21, 0.09);
+		transition: box-shadow .4s;
+		cursor: pointer;
+	}
+	.sixth-section-info__photo-round {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 99px;
+		height: 99px;
+		border-radius: 50%;
+		box-shadow: 0 0 1px 0 rgba(20, 20, 21, 0.75);
+		background-color: #ffffff;
+		z-index: 99;
+	}
+	.sixth-section-info__text {
+		padding-bottom: 18px;
+		font-size: 17px;
+		line-height: 1.59;
+		color: rgba(0, 0, 0, 0.7);
+	}
+	.stars {
+		padding-bottom: 20px;
+		direction: rtl;
+		i {
+			font-size: 12.4px;
+			letter-spacing: 1.2px;
+			color: #e0e0e0;
+			&:hover, &:hover~i {
+				color: #ffef3b;
+				cursor: pointer;
+			}
+		}
+	}
+	.sixth-section-info__footer {
+		font-size: 17px;
+		font-style: italic;
+	}
+}
+@mixin sixth-section-info__small-round {
+	@include flex-row;
+	font-size: 18px;
+	position: absolute;
+	left: -40px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	box-shadow: 0.5px 3px 14px 0 rgba(20, 20, 21, 0.08);
+	color: rgba(0, 0, 0, 0.9);
+	transition: background-color .4s, color .4s;
+	&:hover {
+		background-color: #ff6e47;
+		color: rgba(255, 255, 255, 0.94);
+		cursor: pointer;
+		transition: background-color .4s, color .4s;
+	}
+}
+
+.sixth-section {
+	background-color: #fff;
+	padding-bottom: 140px;
+	.ba-container {
+		.headliner {
+			@include headliner;
+		}
+		.sixth-section-wrapper {
+			@include flex-row;
+			.sixth-section-info__left {
+				@include sixth-section-info;
+				.sixth-section-info__small-round {
+					@include sixth-section-info__small-round;
+				}
+			}
+			.sixth-section-info__right{
+				@include sixth-section-info;
+				.sixth-section-info__small-round {
+					@include sixth-section-info__small-round;
+					left: calc(100% - 8px);
+				}
+			}
+		}
+		.sixth-section-lines {
+			margin-top: 50px;
+			@include flex-row;
+			.line {
+				width: 18px;
+				height: 6px;
+				border-radius: 2.5px;
+				background-color: #e0e0e0;
+				margin-left: 8px;
+				transition: background-color .4s;
+				&:first-child {
+					margin-left: 0;
+				}
+				&:hover {
+					background-color: #ff6e47;
+					cursor: pointer;
+					transition: background-color .4s;
+				}
+			}
+		}
+	}
+}
